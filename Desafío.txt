@@ -1,0 +1,41 @@
+archivo json disponible desde:
+https://62433a7fd126926d0c5d296b.mockapi.io/api/v1/usuarios
+
+voy a utilizar python 3.10, com my sql
+
+debemos consumirlos para disponibilizarlos
+primero consumir la api y obtener los datos formateados
+	jueves 26/05-	Para esto tuve que instalar python
+			luego importar la biblioteca requests
+			igualmente no importaba, así que tuve que instalar la biblioteca (que supuestamente venía preinstalada)
+			para esto utilicé el comando pip, pero el cmd no me funcionaba el comando
+	domingo 29/05	así que tuve que agregar el npath del sistema para que me reconozca el comando que estaba en la carpeta scrips de la instalación de python
+			no funcionaba, así que consulté los paths del sistema, y no la vehía agregado el nuevo path
+			así que pensé en armarme un ambiente de desarrollo virtual en python para evitar todos estos inconvenientes.
+			felizmente, luego de un reinicio la ruta quedó agregada y pude ejecutar pip instal request
+			el código para consumir la api es:
+				import requests
+				import time
+				response = requests.get('https://62433a7fd126926d0c5d296b.mockapi.io/api/v1/usuarios')
+				print(response.url)
+				content = response.content
+				print(content)
+				time.sleep(5)
+
+
+seguridad:
+		la api es https
+
+
+para ejecutar en cmd python
+py C:\Users\juanj\OneDrive\Escritorio\Desafío\cadenajson.py       
+
+
+
+
+
+
+disponibilizar 
+Usuario MySQL
+jjm2032
+jjmLitochaujjm2008*
