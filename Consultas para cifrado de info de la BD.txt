@@ -1,0 +1,7 @@
+Cifre el contenido del campo de numero de tarjeta de credito:
+
+update cliente set credit_card_num=aes_encrypt(credit_card_num,'claveaes1*') 
+
+Para descifrar el campo:
+
+select convert (aes_decrypt(credit_card_num,'claveaes1*')using utf8) as numeroTC from cliente
